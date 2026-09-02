@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME | IPL TICKET BOOKING</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to IPL Booking</h1>
+    </header>
+
+    <nav>
+        <u1>
+            <li><a href="home.html"> Home</a></li>
+            <li><a href="booktickets.html">Book tickets</a></li>
+            <li><a href="matches.html">Matches</a></li>
+            <li><a href="mybookings.html">My Bookings</a></li>
+            <li><a href="guidlines.html">Guidlines</a></li>
+
+        </u1>
+
+    </nav>
+
+    <h2>Popular Teams</h2>
+    <ul>
+        <li>Chennai Super Kings</li>
+        <li>Mumbai Indians</li>
+        <li>Punjab Kings</li>
+    </ul>
+
+    <h2>Venues</h2>
+    <ul>
+        <li>Chennai</li>
+        <li>Bengaluru</li>
+        <li>Mumbai</li>
+        <li>Delhi</li>
+
+    </ul>
+    
+    
+    <table border="5">
+        <thead>
+            <tr>
+                <th rowspan="2">Matches</th>
+                <th rowspan="2">Teams</th>
+                <th colspan="3">Ticket Prices</th>
+            </tr>
+            <tr>
+                <th>General</th>
+                <th>Premium</th> <th>Vip</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td><td>CSK vs MI</td>
+                <td>1200</td> <td>2000</td>
+                <td>5000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <label for="team">Filter</label>
+    <select id="team" name="team">
+        <option value="all">All Teams</option>
+        <option value="csk">CSK</option>
+        <option value="gt">GT</option>
+        <option value="dc">DC</option>
+        <option value="rcb">RCB</option>
+        <option value="kkr">KKR</option>
+    </select>
+    <form action="/Book" method="post">
+        <input type="hidden"
+        name="match" value="'01">
+        <button type="submit">Book</button>
+    </form>
+
+    <form action="/confirm" method="post">
+        <label>Match</label>
+        <select name="match">
+        <option value="01">CSK vs MI</option>
+        </select>
+        <label>Stand Category</label>
+        <select name="stand">
+            <option>General</option>
+            <option>Premium</option>
+            <option>Vip</option>
+        </select>
+        <label>No. of tickets</label>
+        <input type="number" min="1">
+        <label>Name</label>
+        <input type="text" name="name">
+        <label>Email</label>
+        <input type="email" name="email">
+    </form>
+
+    
+    <footer>
+        <p>2027 IPL Booking. &copy; All rights reserved.</p>
+
+    </footer>
+    
+</body>
+</html>
